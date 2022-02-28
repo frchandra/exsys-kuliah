@@ -1,0 +1,37 @@
+version: '3.7'
+
+services:
+    app:
+        build:
+            context: .
+            dockerfile: .docker/Dockerfile
+        image: 'exsys' #change me
+        container_name: exsysup-app #change me
+        ports:
+            - "8000:80"
+        volumes:
+            - ./:/var/www/html:Z
+        # networks:
+        #     - default-laravel-network
+        # depends_on:
+        #     - db
+    # db:
+    #     image: 'mysql:latest'
+    #     container_name: default-laravel-db
+    #     restart: unless-stopped
+    #     ports:
+    #         - "3306:3306"
+    #     environment:
+    #         MYSQL_DATABASE: default_laravel_db
+    #         MYSQL_ROOT_PASSWORD: root
+    #         MYSQL_PASSWORD: root
+    #         MYSQL_USER: chandra
+    #         MYSQL_ALLOW_EMPTY_PASSWORD: 'no'
+    #     volumes:
+    #         - ./.docker/dbdata:/var/lib/mysql:Z
+    #     networks:
+    #         - default-laravel-network
+
+# networks:
+#     default-laravel-network:
+#         driver: bridge
