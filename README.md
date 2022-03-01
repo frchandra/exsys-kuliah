@@ -32,7 +32,7 @@ Frontend and Web Theme:
 #### Sumber Literasi
 <ul>
     <li>ACG Clinical Guideline Diagnosis Treament & Prevention of Acute Diarrhea Infection, 2016</li>
-    <li><a href="ygi.or.id/ketahui-penanganan-diare-akut-yang-tepat/">Ketahui Penanganan Diare Akut yang Tepat, dr. Virly Nanda Muzellina, SpPD</a></li>
+    <li><a href="https://ygi.or.id/ketahui-penanganan-diare-akut-yang-tepat/">Ketahui Penanganan Diare Akut yang Tepat, dr. Virly Nanda Muzellina, SpPD</a></li>
 </ul>
 
 
