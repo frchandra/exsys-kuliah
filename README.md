@@ -11,7 +11,7 @@ Nismara Chandra Herdiputra | 20/456374/TK/50504 | TIF <br>
 Expert System Core:
 <ul>
     <li>Python3 Programming Language</li>
-    <li><a href="https://github.com/nilp0inter/experta">Experta</a></li>
+    <li><a href="https://github.com/nilp0inter/experta">Experta (Berbasis CLIPS)</a></li>
 </ul>
 
 Backend Core Interaction:
