@@ -7,6 +7,13 @@ visit : http://exsys.bekisar.net/
 #### Tugas Matkul Kecerdasan Buatan - DTETI 2021/2022
 Nismara Chandra Herdiputra | 20/456374/TK/50504 | TIF <br>
 <br>
+### Code-Code Utama:
+<ul>
+    <li><a href="https://github.com/frchandra/exsys-kuliah/blob/main/python/test.py">Python</a></li>
+    <li><a href="https://github.com/frchandra/exsys-kuliah/blob/main/app/Http/Controllers/ComputeController.php">PHP I</a></li>
+    <li><a href="https://github.com/frchandra/exsys-kuliah/blob/main/resources/views/result.blade.php#L89">PHP II</a></li>
+</ul>
+
 ### Teknologi yang Digunakan:
 Expert System Core:
 <ul>
