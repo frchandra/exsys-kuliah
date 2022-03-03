@@ -4,25 +4,46 @@ services:
     app:
         build:
             context: .
-            dockerfile: .docker/Dockerfile
-        image: 'exsys' #change me
-        container_name: exsysup-app #change me
-        ports:
-            - "8000:80"
+            dockerfile: .docker/app.Dockerfile
+        image: 'exsys-app' #change me
+        container_name: 'exsys-app' #change me
         volumes:
-            - ./:/var/www/html:Z
-        # networks:
-        #     - default-laravel-network
+            - ./:/var/www:Z
+            - ./.docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini:Z
+        networks:
+            - exsys-network #change me
         # depends_on:
         #     - db
+    
+    server:       
+        image: nginx:alpine
+        container_name: 'exsys-nginx'
+        restart: unless-stopped
+        tty: true
+        privileged: true
+        volumes:
+            - ./:/var/www:z 
+            - ./.docker/nginx/conf.d/:/etc/nginx/conf.d/:z #change this: ./.docker/nginx/conf.d/default.conf (fastcgi_pass default-laravel-app:9000;)
+        ports:
+            - "8000:80"
+        networks:
+            - exsys-network 
+
+    # cache:
+    #     image: redis:6
+    #     container_name: default-laravel-cache
+    #     restart: unless-stopped
+    #     networks:
+    #         - default-laravel-network
+
     # db:
-    #     image: 'mysql:latest'
-    #     container_name: default-laravel-db
+    #     image: 'mysql:8.0.28'
+    #     container_name: default-laravel-db #change me
     #     restart: unless-stopped
     #     ports:
     #         - "3306:3306"
     #     environment:
-    #         MYSQL_DATABASE: default_laravel_db
+    #         MYSQL_DATABASE: default_laravel_db #change me
     #         MYSQL_ROOT_PASSWORD: root
     #         MYSQL_PASSWORD: root
     #         MYSQL_USER: chandra
@@ -30,8 +51,8 @@ services:
     #     volumes:
     #         - ./.docker/dbdata:/var/lib/mysql:Z
     #     networks:
-    #         - default-laravel-network
+    #         - default-laravel-network #change me
 
-# networks:
-#     default-laravel-network:
-#         driver: bridge
+networks:
+    exsys-network: #change me
+        driver: bridge
