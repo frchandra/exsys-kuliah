@@ -23,7 +23,7 @@ Expert System Core:
 
 Backend Core Interaction:
 <ul>
-    <li>Apache Web Server</li>
+    <li>Nginx Server</li>
     <li>PHP 8 Programming Language</li>
     <li><a href="https://github.com/laravel/laravel">Laravel 8</a></li>
 </ul>
