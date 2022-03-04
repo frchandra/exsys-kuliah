@@ -27,8 +27,8 @@ services:
             - ./.docker/nginx/conf.d/:/etc/nginx/conf.d/:z #change this: ./.docker/nginx/conf.d/default.conf (fastcgi_pass default-laravel-app:9000;)
             - ./.docker/certs:/etc/nginx/certs
         ports:
-            - "80:80"
-            - "443:443"  
+            - "8000:80"
+            # - "443:443"  
         networks:
             - exsys-network 
 

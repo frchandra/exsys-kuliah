@@ -16,3 +16,4 @@ yarn-error.log
 /.docker/certs/*.key
 /.docker/certs/*.crt
 /.docker/dbdata
+/nginx/conf.d/default.conf
