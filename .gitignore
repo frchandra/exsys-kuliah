@@ -13,5 +13,6 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
-
+/.docker/certs/*.key
+/.docker/certs/*.crt
 /.docker/dbdata

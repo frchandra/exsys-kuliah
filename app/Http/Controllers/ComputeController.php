@@ -14,7 +14,7 @@ class ComputeController extends Controller{
 
         $caution=false;
 
-        $process = new Process(['python3', '/var/www/html/python/test.py',$input["gejalaPertama"], $input["berair"], $input["berairParah"], $input["disentri"], $input["bepergian"], $input["demam"], $input["durasi"]]);
+        $process = new Process(['python3', '/var/www/python/test.py',$input["gejalaPertama"], $input["berair"], $input["berairParah"], $input["disentri"], $input["bepergian"], $input["demam"], $input["durasi"]]);
         $process->run();
         
         if (!$process->isSuccessful()) {

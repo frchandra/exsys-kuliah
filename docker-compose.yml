@@ -7,6 +7,7 @@ services:
             dockerfile: .docker/app.Dockerfile
         image: 'exsys-app' #change me
         container_name: 'exsys-app' #change me
+        privileged: true
         volumes:
             - ./:/var/www:Z
             - ./.docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini:Z
@@ -24,8 +25,10 @@ services:
         volumes:
             - ./:/var/www:z 
             - ./.docker/nginx/conf.d/:/etc/nginx/conf.d/:z #change this: ./.docker/nginx/conf.d/default.conf (fastcgi_pass default-laravel-app:9000;)
+            - ./.docker/certs:/etc/nginx/certs
         ports:
-            - "8000:80"
+            - "80:80"
+            - "443:443"  
         networks:
             - exsys-network 
 

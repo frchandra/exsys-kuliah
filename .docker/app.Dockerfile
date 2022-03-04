@@ -5,6 +5,7 @@ USER root
 WORKDIR /var/www/html
 
 RUN apt-get update && apt-get install -y \
+    sudo \ 
     build-essential \
     libpng-dev \
     libjpeg62-turbo-dev \
@@ -15,7 +16,9 @@ RUN apt-get update && apt-get install -y \
     nano \
     unzip \
     git \
-    curl
+    curl \
+    python3 \
+    python3-pip
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
@@ -42,8 +45,10 @@ COPY . /var/www
 COPY --chown=www:www . /var/www
 
 # Change current user to www
-USER www
+USER root
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
 CMD ["php-fpm"]
+
+WORKDIR /var/www
