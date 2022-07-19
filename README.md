@@ -2,7 +2,7 @@
 Sebuah aplikasi sederhana yang menerapkan salah satu bidang kecerdasan buatan yaitu expert system untuk mendiagnosa penyakit diare
 
 #### Prototype
-visit : http://exsys.bekisar.net/
+visit : http://exsys.bekisar.net/ (deprecated)
 
 #### Tugas Matkul Kecerdasan Buatan - DTETI 2021/2022
 Nismara Chandra Herdiputra | 20/456374/TK/50504 | TIF <br>
